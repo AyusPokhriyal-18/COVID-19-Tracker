@@ -18,10 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:toolbarId="@+id/toolbar"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|exitUntilCollapsed"
+
 android:id="@+id/colLayout"
-            app:contentScrim="?attr/colorPrimary">
+          >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,6 +64,7 @@ android:id="@+id/colLayout"
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_height="?attr/actionBarSize"
+               app:navigationIcon="@drawable/ic_menu_black_24dp"
                 android:layout_width="match_parent"></androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
