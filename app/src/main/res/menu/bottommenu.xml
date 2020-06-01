@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/Home"
         android:icon="@drawable/ic_Home"
@@ -8,18 +9,16 @@
         app:showAsAction="ifRoom"></item>
 
     <item android:id="@+id/India"
-        android:icon="@drawable/india"
+        android:icon="@drawable/ic_flag"
         android:title="Home"
         app:showAsAction="ifRoom"></item>
 
     <item android:id="@+id/AllCountries"
-        android:icon="@drawable/india"
+        android:icon="@drawable/ic_Countries"
         android:title="All Countries"
         app:showAsAction="ifRoom"></item>
     <item android:id="@+id/Symptoms"
-        android:icon="@drawable/Symptoms"
+        android:icon="@drawable/ic_Symptoms"
         android:title="Symptoms"
         app:showAsAction="ifRoom"></item>
-
-
 </menu>
