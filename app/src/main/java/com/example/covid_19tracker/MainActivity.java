@@ -20,15 +20,15 @@ CollapsingToolbarLayout collapsingToolbarLayout;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activitymain2);
 
-      ViewInit()
+      ViewInit();
 
 
     }
 
     private void ViewInit() {
     t1=findViewById(R.id.t1);
-        t2=findViewById(R.id.t1);
-        t3=findViewById(R.id.t1);
+        t2=findViewById(R.id.t2);
+        t3=findViewById(R.id.t3);
         toolbar= findViewById(R.id.toolbar);
         bottomNavigationView=findViewById(R.id.bottommenu);
         collapsingToolbarLayout=findViewById(R.id.colLayout);

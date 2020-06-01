@@ -32,6 +32,7 @@ android:id="@+id/colLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="worldwide"
+                   android:id="@+id/t1"
                     android:fontFamily="casual"
                     android:textSize="18sp"
                     android:textAlignment="center"
@@ -43,7 +44,8 @@ android:id="@+id/colLayout"
                     android:fontFamily="casual"
                     android:textSize="20sp"
                     android:textAlignment="center"
-                    android:textColor="#ffff"></TextView>
+                    android:textColor="#ffff"
+                    android:id="@+id/t2"></TextView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -51,7 +53,8 @@ android:id="@+id/colLayout"
                     android:fontFamily="casual"
                     android:textSize="14sp"
                     android:textAlignment="center"
-                    android:textColor="#ffff"></TextView>
+                    android:textColor="#ffff"
+                    android:id="@+id/t3"></TextView>
 
 
 
