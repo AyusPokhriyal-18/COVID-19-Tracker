@@ -34,6 +34,7 @@ bottomSetup();
     }
 
     private void bottomSetup() {
+     bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
