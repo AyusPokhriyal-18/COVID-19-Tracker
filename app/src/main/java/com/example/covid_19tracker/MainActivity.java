@@ -44,7 +44,8 @@ bottomSetup();
                         FragmentManager fragmentManager= getSupportFragmentManager();
 
                         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.cont)
+                      fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                        fragmentTransaction.replace(R.id.container.homeFrag);
                         break;
                     case  R.id.India:
                         Toast.makeText(getApplicationContext(),"India Fragment",Toast.LENGTH_SHORT).show();

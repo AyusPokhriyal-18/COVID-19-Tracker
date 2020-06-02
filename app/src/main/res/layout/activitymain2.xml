@@ -20,7 +20,8 @@
             app:toolbarId="@+id/toolbar"
             app:title="COVID-19"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|exitUntilCollapsed"
-
+app:expandedTitleTextAppearance="@style/ExpandText"
+            app:collapsedTitleTextAppearance="@id/colLayout"
 android:id="@+id/colLayout"
           >
 
