@@ -3,6 +3,8 @@ package com.example.covid_19tracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,9 +34,11 @@ bottomSetup();
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
-                switch (item.getItemId())
-                    case R.id.Home;
-            }
+                switch (item.getItemId()){
+                    case R.id.Home:
+                       .startActivity(new Intent(context,MainActivity.class));
+                        break;
+            }}
         });
     }
 
