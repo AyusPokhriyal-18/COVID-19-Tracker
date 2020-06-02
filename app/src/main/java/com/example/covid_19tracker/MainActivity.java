@@ -3,6 +3,9 @@ package com.example.covid_19tracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,9 +39,23 @@ bottomSetup();
             public void onNavigationItemReselected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.Home:
-                       .startActivity(new Intent(context,MainActivity.class));
+                     Toast.makeText(getApplicationContext(),"Home Fragment",Toast.LENGTH_SHORT).show();
+                        Fragment homeFrag= new  HomeFrag();
+                        FragmentManager fragmentManager= getSupportFragmentManager();
+
+                        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.cont)
                         break;
-            }}
+                    case  R.id.India:
+                        Toast.makeText(getApplicationContext(),"India Fragment",Toast.LENGTH_SHORT).show();
+                        break;
+                    case  R.id.AllCountries:
+                        Toast.makeText(getApplicationContext(),"AllCountries Fragment",Toast.LENGTH_SHORT).show();
+                        break;
+                    case  R.id.Symptoms:
+                        Toast.makeText(getApplicationContext(),"Symptoms Fragment",Toast.LENGTH_SHORT).show();
+                        break;
+                }}
         });
     }
 
