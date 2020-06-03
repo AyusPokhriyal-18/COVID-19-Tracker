@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.covid_19tracker.Fragment.HomeFrag;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,7 +41,7 @@ bottomSetup();
                 switch (item.getItemId()){
                     case R.id.Home:
                      Toast.makeText(getApplicationContext(),"Home Fragment",Toast.LENGTH_SHORT).show();
-                        Fragment homeFrag= new  HomeFrag();
+                        Fragment homeFrag= new HomeFrag();
                         FragmentManager fragmentManager= getSupportFragmentManager();
 
                         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
