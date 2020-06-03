@@ -15,7 +15,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp" >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -23,7 +24,8 @@
                 android:fontFamily="@font/abril_fatface"
                 android:text="TotalCases"
                 android:textSize="20sp"
-                android:id="@+id/totalCase"></TextView>
+                android:id="@+id/totalCase"
+                android:padding="5dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,16 +36,19 @@
                 android:layout_marginRight="-1dp"
                 android:fontFamily="@font/aldrich"
                 android:text="00000"
+                android:padding="5dp"
                 android:textSize="20sp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abril_fatface"
-                android:text="DeathCases"
+                android:text="TotalDeaths"
+                android:padding="5dp"
                 android:textSize="20sp"
                 android:id="@+id/deathCases"
-                android:layout_below="@id/totalCase"></TextView>
+                android:layout_below="@id/totalCase"
+                android:textColor="@color/red"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,9 +56,35 @@
                 android:layout_below="@id/totalCase"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="8dp"
+                android:padding="5dp"
                 android:fontFamily="@font/aldrich"
                 android:text="00000"
-                android:textSize="20sp"></TextView>
+                android:textSize="20sp"
+                android:textColor="@color/red"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abril_fatface"
+                android:text="TotalRecovered"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:id="@+id/totalrecov"
+                android:layout_below="@id/deathCases"
+                android:textColor="@color/Dgreen" ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/aldrich"
+                android:text="00000"
+                android:textSize="20sp"
+                android:layout_below="@id/deathCases"
+               android:textColor="@color/Dgreen"
+                ></TextView>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
