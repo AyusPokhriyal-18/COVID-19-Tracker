@@ -41,6 +41,7 @@
                 android:text="00000"
                 android:padding="5dp"
                android:textColor="@color/white"
+            android:id="@+id/cases"
                 android:textSize="20sp"></TextView>
 
             <TextView
@@ -63,6 +64,8 @@
                 android:padding="5dp"
                 android:fontFamily="@font/aldrich"
                 android:text="00000"
+
+                android:id="@+id/deaths"
                 android:textSize="20sp"
                 android:textColor="@color/red"></TextView>
 
@@ -84,6 +87,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/aldrich"
+                android:id="@+id/recover"
                 android:text="00000"
                 android:textSize="20sp"
                 android:layout_below="@id/deathCases"
