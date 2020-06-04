@@ -14,7 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.covid_19tracker.Fragment.CountryiesFrag;
 import com.example.covid_19tracker.Fragment.HomeFrag;
+import com.example.covid_19tracker.Fragment.IndiaFrag;
+import com.example.covid_19tracker.Fragment.SymptomsFrag;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -46,16 +49,37 @@ bottomSetup();
 
                         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                       fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                        fragmentTransaction.replace(R.id.container.homeFrag);
+                        fragmentTransaction.replace(R.id.container,homeFrag);
                         break;
+
                     case  R.id.India:
                         Toast.makeText(getApplicationContext(),"India Fragment",Toast.LENGTH_SHORT).show();
+                        Fragment indiaFrag= new IndiaFrag();
+                        FragmentManager fragmentManager1= getSupportFragmentManager();
+
+                        FragmentTransaction fragmentTransaction1=fragmentManager1.beginTransaction();
+                        fragmentTransaction1.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                        fragmentTransaction1.replace(R.id.container,indiaFrag);
                         break;
+
                     case  R.id.AllCountries:
                         Toast.makeText(getApplicationContext(),"AllCountries Fragment",Toast.LENGTH_SHORT).show();
+                        Fragment country= new CountryiesFrag();
+                        FragmentManager fragmentManager2= getSupportFragmentManager();
+
+                        FragmentTransaction fragmentTransaction2=fragmentManager2.beginTransaction();
+                        fragmentTransaction2.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                        fragmentTransaction2.replace(R.id.container,country);
                         break;
+
                     case  R.id.Symptoms:
                         Toast.makeText(getApplicationContext(),"Symptoms Fragment",Toast.LENGTH_SHORT).show();
+                        Fragment symptoms= new SymptomsFrag();
+                        FragmentManager fragmentManager3= getSupportFragmentManager();
+
+                        FragmentTransaction fragmentTransaction3=fragmentManager3.beginTransaction();
+                        fragmentTransaction3.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                        fragmentTransaction3.replace(R.id.container,symptoms);
                         break;
                 }}
         });
@@ -81,5 +105,17 @@ bottomSetup();
         bottomNavigationView=findViewById(R.id.bottommenu);
         collapsingToolbarLayout=findViewById(R.id.colLayout);
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Fragment homeFrag= new HomeFrag();
+        FragmentManager fragmentManager= getSupportFragmentManager();
+
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        fragmentTransaction.replace(R.id.container,homeFrag);
     }
 }

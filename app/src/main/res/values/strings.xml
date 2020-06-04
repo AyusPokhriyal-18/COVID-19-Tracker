@@ -10,6 +10,8 @@
     <string name="hindi">हिन्दी</string>
     <string name="Drycough">Dry Cough</string>
     <string name="fever_tiredness">Fever, Tiredness</string>
-    
+    <string name="aches_and_pain">Aches and Pain</string>
+    <string name="runnynose">Runny Nose</string>
+    <string name="Sourthroat">Sour Throat</string>
 
 </resources>

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.HomeFrag"
+   android:background="@color/black"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -15,6 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+           android:background="@color/black"
             android:layout_height="match_parent"
             android:padding="10dp" >
 
@@ -24,6 +26,7 @@
                 android:fontFamily="@font/abril_fatface"
                 android:text="TotalCases"
                 android:textSize="20sp"
+               android:textColor="@color/white"
                 android:id="@+id/totalCase"
                 android:padding="5dp"></TextView>
 
@@ -37,6 +40,7 @@
                 android:fontFamily="@font/aldrich"
                 android:text="00000"
                 android:padding="5dp"
+               android:textColor="@color/white"
                 android:textSize="20sp"></TextView>
 
             <TextView
@@ -91,24 +95,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:elevation="10dp"
+    android:orientation="vertical"
     android:background="@drawable/back_solid"
+   android:padding="10dp"
     android:layout_margin="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="5dp"
-        app:cardBackgroundColor="@color/Lorange"
-        app:cardCornerRadius="20dp">
+        app:cardBackgroundColor="@color/Dorange"
+        app:cardCornerRadius="20dp"
+        >
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+  android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/q1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abril_fatface"
+        android:text="@string/quesec"
+        android:textColor="@color/white"
+        android:textSize="24sp"></TextView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/abril_fatface"
+           android:textColor="@color/white"
             android:textSize="16sp"
+            android:text="@string/ansFirstText"
+            ></TextView>
 
 
+</LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
 </LinearLayout>
