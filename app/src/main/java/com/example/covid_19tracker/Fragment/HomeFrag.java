@@ -52,14 +52,15 @@ public class HomeFrag extends Fragment {
             public void onResponse(String response) {
                 try {
 
-                    JsonObject  jsonObject = new JsonObject(response);
-                    totalCase.setText(jsonObject.get("total_cases"));
+                    JsonObject  jsonObject = new JsonObject(response).getJsonObject("world_total");
+                    totalCase.setText( jsonObject.get("total_cases"));
                     totalDeath.setText(jsonObject.get("total_deaths"));
                     totalRecov.setText(jsonObject.get("total_recovered"));
 
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Toast.makeText(getActivity(),""+e,Toast.LENGTH_LONG).show();
                 }
             }
         }, new Response.ErrorListener() {
@@ -70,6 +71,7 @@ public class HomeFrag extends Fragment {
             }
 
     });
+   requestQueue.add(stringRequest);
     }
 
     private void viewInit() {
