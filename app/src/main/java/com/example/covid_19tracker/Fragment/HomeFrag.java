@@ -51,10 +51,11 @@ public class HomeFrag extends Fragment {
             @Override
             public void onResponse(String response) {
                 try {
-                    JsonObject jsonObject = new JsonObject(response);
-                    totalCase.setText(jsonObject.getAsString("total_cases"));
-                    totalDeath.setText(jsonObject.getAsString("total_deaths"));
-                    totalCase.setText(jsonObject.getAsString("total_recovered"));
+
+                    JsonObject  jsonObject = new JsonObject(response);
+                    totalCase.setText(jsonObject.get("total_cases"));
+                    totalDeath.setText(jsonObject.get("total_deaths"));
+                    totalRecov.setText(jsonObject.get("total_recovered"));
 
 
                 } catch (JSONException e) {
@@ -65,7 +66,7 @@ public class HomeFrag extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("tag",String.valueOf(error));
-                Toast.makeText(getActivity(),""+error.Toast.Le)
+                Toast.makeText(getActivity(),""+error,Toast.LENGTH_LONG).show();
             }
 
     });
