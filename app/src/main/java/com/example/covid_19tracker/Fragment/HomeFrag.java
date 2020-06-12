@@ -21,6 +21,7 @@ import com.example.covid_19tracker.R;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 
 /**
@@ -51,12 +52,10 @@ public class HomeFrag extends Fragment {
             @Override
             public void onResponse(String response) {
                 try {
-
-                    JsonObject  jsonObject = new JsonObject(response).getJsonObject("world_total");
-                    totalCase.setText( jsonObject.get("total_cases"));
-                    totalDeath.setText(jsonObject.get("total_deaths"));
-                    totalRecov.setText(jsonObject.get("total_recovered"));
-
+                 JSONObject jsonObject=new JSONObject(response);
+                    totalCase.setText((CharSequence) jsonObject.get("total_cases"));
+                    totalDeath.setText((CharSequence) jsonObject.get("total_deaths"));
+                    totalRecov.setText((CharSequence) jsonObject.get("total_recovered"));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
