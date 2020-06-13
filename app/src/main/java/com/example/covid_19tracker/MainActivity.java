@@ -101,7 +101,7 @@ bottomSetup();
         t2=findViewById(R.id.t2);
         t3=findViewById(R.id.t3);
         toolbar= findViewById(R.id.toolbar);
-        bottomNavigationView=findViewById(R.id.bottommenu);
+        bottomNavigationView=findViewById(R.id.chipbottommenu);
         collapsingToolbarLayout=findViewById(R.id.colLayout);
 
     }
