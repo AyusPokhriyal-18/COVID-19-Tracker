@@ -2,11 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <item
-    <item android:id="@+id/Home"
+     android:id="@+id/Home"
         android:icon="@drawable/ic_Home"
         android:title="Home"
        app:cnb_backgroundcolor="#ff4500"
 app:cnb_textcolor="#fff"
         app:cnb_iconcolor="#fff"
+        app:showAsAction="ifRoom"></item>
+    <item android:id="@+id/India"
+        android:icon="@drawable/ic_indiaa"
+        app:cnb_backgroundcolor="#ff4500"
+        app:cnb_textcolor="#fff"
+        app:cnb_iconcolor="#fff"
+        android:title="Home"
+        app:showAsAction="ifRoom"></item>
+
+    <item android:id="@+id/AllCountries"
+        android:icon="@drawable/ic_countries"
+        app:cnb_backgroundcolor="#ff4500"
+        app:cnb_textcolor="#fff"
+        app:cnb_iconcolor="#fff"
+        android:title="All Countries"
+        app:showAsAction="ifRoom"></item>
+    <item android:id="@+id/Symptoms"
+        android:icon="@drawable/ic_Symptoms"
+        app:cnb_backgroundcolor="#ff4500"
+        app:cnb_textcolor="#fff"
+        app:cnb_iconcolor="#fff"
+        android:title="Symptoms"
         app:showAsAction="ifRoom"></item>
 </menu>
