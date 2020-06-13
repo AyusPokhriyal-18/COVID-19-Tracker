@@ -34,7 +34,7 @@ CollapsingToolbarLayout collapsingToolbarLayout;
       ViewInit();
 toolbarSetup();
 bottomSetup();
-getDataAPI() ;   }
+  }
     private void bottomSetup() {
      bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
