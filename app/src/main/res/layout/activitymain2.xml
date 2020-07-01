@@ -86,8 +86,8 @@ android:id="@+id/colLayout"
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-        android:id="@+id/chipbottommenu"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menubottom"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:layout_gravity="bottom"
@@ -95,7 +95,7 @@ android:id="@+id/colLayout"
         app:menu="@menu/menubottom"
         android:elevation="16dp"
         android:padding="8dp"
-        app:cnb_menuResource="@menu/menubottom"></com.ismaeldivita.chipnavigation.ChipNavigationBar>
+        app:cnb_menuResource="@menu/menubottom"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

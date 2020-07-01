@@ -21,11 +21,14 @@ import com.example.covid_19tracker.Fragment.SymptomsFrag;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
 public class MainActivity extends AppCompatActivity {
 TextView t1, t2, t3;
 Toolbar toolbar;
 BottomNavigationView bottomNavigationView;
+
 CollapsingToolbarLayout collapsingToolbarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,7 @@ toolbarSetup();
 bottomSetup();
   }
     private void bottomSetup() {
-     bottomNavigationView.setItemIconTintList(null);
+       bottomNavigationView .setItemIconTintList(null);
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
@@ -101,7 +104,7 @@ bottomSetup();
         t2=findViewById(R.id.t2);
         t3=findViewById(R.id.t3);
         toolbar= findViewById(R.id.toolbar);
-        bottomNavigationView=findViewById(R.id.chipbottommenu);
+      bottomNavigationView=findViewById(R.id.menubottom);
         collapsingToolbarLayout=findViewById(R.id.colLayout);
 
     }

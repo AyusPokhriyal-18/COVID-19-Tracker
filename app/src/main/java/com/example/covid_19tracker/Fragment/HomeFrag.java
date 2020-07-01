@@ -53,9 +53,9 @@ public class HomeFrag extends Fragment {
             public void onResponse(String response) {
                 try {
                  JSONObject jsonObject=new JSONObject(response);
-                    totalCase.setText((CharSequence) jsonObject.get("total_cases"));
-                    totalDeath.setText((CharSequence) jsonObject.get("total_deaths"));
-                    totalRecov.setText((CharSequence) jsonObject.get("total_recovered"));
+                    totalCase.setText(jsonObject.getString("total_cases"));
+                    totalDeath.setText(jsonObject.getString("total_deaths"));
+                    totalRecov.setText( jsonObject.getString("total_recovered"));
 
                 } catch (JSONException e) {
                     e.printStackTrace();

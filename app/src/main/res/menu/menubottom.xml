@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menubottom"
+    >
+
+
 <item
      android:id="@+id/Home"
         android:icon="@drawable/ic_home"
         android:title="Home"
-       app:cnb_backgroundcolor="#ff4500"
-app:cnb_textcolor="#fff"
-        app:cnb_iconcolor="#fff"
+android:iconTint="@color/Dgreen"
         app:showAsAction="ifRoom"></item>
     <item android:id="@+id/India"
         android:icon="@drawable/ic_india"
-        app:cnb_backgroundcolor="#ff4500"
-        app:cnb_textcolor="#fff"
-        app:cnb_iconcolor="#fff"
-        android:title="Home"
+        android:iconTint="@color/Dgreen"        android:title="India"
         app:showAsAction="ifRoom"></item>
 
     <item android:id="@+id/AllCountries"
         android:icon="@drawable/ic_countries"
-        app:cnb_backgroundcolor="#ff4500"
-        app:cnb_textcolor="#fff"
-        app:cnb_iconcolor="#fff"
-        android:title="All Countries"
-        app:showAsAction="ifRoom"></item>
+       android:title="India"
+        android:iconTint="@color/Dgreen"
+        app:showAsAction="ifRoom">
+
+    </item>
     <item android:id="@+id/Symptoms"
         android:icon="@drawable/ic_symptoms"
-        app:cnb_backgroundcolor="#ff4500"
-        app:cnb_textcolor="#fff"
-        app:cnb_iconcolor="#fff"
-        android:title="Symptoms"
+        android:iconTint="@color/Dgreen"        android:title="Symptoms"
         app:showAsAction="ifRoom"></item>
 </menu>
