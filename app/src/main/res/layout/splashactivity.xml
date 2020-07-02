@@ -23,7 +23,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_marginTop="492dp"
+        android:layout_marginTop="536dp"
         android:text="STAY SAFE, STAY HAPPY"
         android:textAlignment="center"
         android:textSize="24sp"

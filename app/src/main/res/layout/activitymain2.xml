@@ -89,13 +89,16 @@ android:id="@+id/colLayout"
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menubottom"
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="56dp"
         android:layout_gravity="bottom"
-        android:background="@drawable/chip"
+android:background="@drawable/roundedborder"
         app:menu="@menu/menubottom"
+      app:itemTextColor="@color/black"
+
+
         android:elevation="16dp"
         android:padding="8dp"
-        app:cnb_menuResource="@menu/menubottom"></com.google.android.material.bottomnavigation.BottomNavigationView>
+       ></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

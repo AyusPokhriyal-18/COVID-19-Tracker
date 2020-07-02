@@ -2,29 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/menubottom"
+
     >
-
-
-<item
-     android:id="@+id/Home"
+    <item
+        android:id="@+id/Home"
         android:icon="@drawable/ic_home"
         android:title="Home"
-android:iconTint="@color/Dgreen"
-        app:showAsAction="ifRoom"></item>
-    <item android:id="@+id/India"
-        android:icon="@drawable/ic_india"
-        android:iconTint="@color/Dgreen"        android:title="India"
+        android:iconTint="@color/white"
+
         app:showAsAction="ifRoom"></item>
 
     <item android:id="@+id/AllCountries"
         android:icon="@drawable/ic_countries"
-       android:title="India"
-        android:iconTint="@color/Dgreen"
-        app:showAsAction="ifRoom">
+        android:title="All Countries"
+android:iconTint="@color/white"
+        app:showAsAction="ifRoom"></item>
 
-    </item>
+    <item android:id="@+id/India"
+        android:icon="@drawable/ic_india"
+        android:title="India"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom"></item>
+
+
     <item android:id="@+id/Symptoms"
         android:icon="@drawable/ic_symptoms"
-        android:iconTint="@color/Dgreen"        android:title="Symptoms"
+        android:title="Symptoms"
+        android:iconTint="@color/white"
         app:showAsAction="ifRoom"></item>
 </menu>

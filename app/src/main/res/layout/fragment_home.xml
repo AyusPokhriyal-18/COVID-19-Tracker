@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:id="@+id/homeFrag"
     tools:context=".Fragment.HomeFrag"
    android:background="@color/black"
     android:orientation="vertical">
@@ -141,3 +142,10 @@
     </androidx.cardview.widget.CardView>
 </LinearLayout>
 </LinearLayout>
+
+
+
+
+
+
+
