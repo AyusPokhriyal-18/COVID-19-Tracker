@@ -52,7 +52,7 @@ public class HomeFrag extends Fragment {
             @Override
             public void onResponse(String response) {
                 try {
-                 JSONObject jsonObject=new JSONObject(response);
+                 JSONObject jsonObject=new JSONObject(response).getJSONObject("world_total");
                     totalCase.setText(jsonObject.getString("total_cases"));
                     totalDeath.setText(jsonObject.getString("total_deaths"));
                     totalRecov.setText( jsonObject.getString("total_recovered"));
