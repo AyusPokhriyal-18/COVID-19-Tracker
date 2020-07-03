@@ -36,7 +36,7 @@ android:id="@+id/colLayout"
                     android:text="worldwide"
                    android:id="@+id/t1"
                     android:fontFamily="casual"
-                    android:textSize="18sp"
+                    android:textSize="22sp"
                     android:textAlignment="center"
                     android:textColor="#ffff"></TextView>
                 <TextView
@@ -44,7 +44,7 @@ android:id="@+id/colLayout"
                     android:layout_height="wrap_content"
                     android:text="DashBoard"
                     android:fontFamily="casual"
-                    android:textSize="20sp"
+                    android:textSize="28sp"
                     android:textAlignment="center"
                     android:textColor="#ffff"
                     android:id="@+id/t2"></TextView>
@@ -53,7 +53,7 @@ android:id="@+id/colLayout"
                     android:layout_height="wrap_content"
                     android:text="Covid-19 live update"
                     android:fontFamily="casual"
-                    android:textSize="14sp"
+                    android:textSize="21sp"
                     android:textAlignment="center"
                     android:textColor="#ffff"
                     android:id="@+id/t3"></TextView>
@@ -81,6 +81,7 @@ android:id="@+id/colLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/container"
+
             ></FrameLayout>
 
 
@@ -94,7 +95,7 @@ android:id="@+id/colLayout"
 android:background="@drawable/roundedborder"
         app:menu="@menu/menubottom"
       app:itemTextColor="@color/black"
-
+android:backgroundTint="@color/colorPrimary"
 
         android:elevation="16dp"
         android:padding="8dp"

@@ -51,7 +51,7 @@ bottomSetup();
 
                         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                       fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                        fragmentTransaction.replace(R.id.container,homeFrag);
+                        fragmentTransaction.replace(R.id.container,homeFrag).commit();
                         break;
 
                     case  R.id.India:
@@ -61,7 +61,7 @@ bottomSetup();
 
                         FragmentTransaction fragmentTransaction1=fragmentManager1.beginTransaction();
                         fragmentTransaction1.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                        fragmentTransaction1.replace(R.id.container,indiaFrag);
+                        fragmentTransaction1.replace(R.id.container,indiaFrag).commit();
                         break;
 
                     case  R.id.AllCountries:
@@ -71,7 +71,7 @@ bottomSetup();
 
                         FragmentTransaction fragmentTransaction2=fragmentManager2.beginTransaction();
                         fragmentTransaction2.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                        fragmentTransaction2.replace(R.id.container,country);
+                        fragmentTransaction2.replace(R.id.container,country).commit();
                         break;
 
                     case  R.id.Symptoms:
@@ -81,7 +81,7 @@ bottomSetup();
 
                         FragmentTransaction fragmentTransaction3=fragmentManager3.beginTransaction();
                         fragmentTransaction3.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                        fragmentTransaction3.replace(R.id.container,symptoms);
+                        fragmentTransaction3.replace(R.id.container,symptoms).commit();
                         break;
                 }}
         });
@@ -118,6 +118,6 @@ bottomSetup();
 
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        fragmentTransaction.replace(R.id.container,homeFrag);
+        fragmentTransaction.replace(R.id.container,homeFrag).commit();
     }
 }
