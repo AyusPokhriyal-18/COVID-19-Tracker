@@ -47,15 +47,15 @@ public class HomeFrag extends Fragment {
     private void getDataAPI() {
         RequestQueue requestQueue= Volley.newRequestQueue(getActivity());
 
-        String url="https://akashraj.tech/corona/api";
+        String url="https://disease.sh/v3/covid-19/all ";
         StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
-                 JSONObject jsonObject=new JSONObject(response).getJSONObject("world_total");
-                    totalCase.setText(jsonObject.getString("total_cases"));
-                    totalDeath.setText(jsonObject.getString("total_deaths"));
-                    totalRecov.setText( jsonObject.getString("total_recovered"));
+                 JSONObject jsonObject=new JSONObject(response);
+                    totalCase.setText(jsonObject.getString("cases"));
+                    totalDeath.setText(jsonObject.getString("deaths"));
+                    totalRecov.setText( jsonObject.getString("recovered"));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
