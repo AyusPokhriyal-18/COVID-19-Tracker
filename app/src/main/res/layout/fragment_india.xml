@@ -9,6 +9,13 @@
     android:background="@color/black"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="229dp"
+
+        android:paddingTop="10dp"
+        app:srcCompat="@drawable/india" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +35,7 @@
                 android:text="TotalCases"
                 android:textSize="20sp"
                 android:textColor="@color/white"
-                android:id="@+id/totalCase"
+                android:id="@+id/ttotalCase"
                 android:padding="5dp"></TextView>
 
             <TextView
@@ -42,7 +49,7 @@
                 android:text="00000"
                 android:padding="5dp"
                 android:textColor="@color/white"
-                android:id="@+id/cases"
+                android:id="@+id/ccases"
                 android:textSize="20sp"></TextView>
 
             <TextView
@@ -52,21 +59,21 @@
                 android:text="TotalDeaths"
                 android:padding="5dp"
                 android:textSize="20sp"
-                android:id="@+id/deathCases"
-                android:layout_below="@id/totalCase"
+                android:id="@+id/ddeathCases"
+                android:layout_below="@id/ttotalCase"
                 android:textColor="@color/red"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/totalCase"
+                android:layout_below="@id/ttotalCase"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="8dp"
                 android:padding="5dp"
                 android:fontFamily="@font/aldrich"
                 android:text="00000"
 
-                android:id="@+id/deaths"
+                android:id="@+id/ddeaths"
                 android:textSize="20sp"
                 android:textColor="@color/red"></TextView>
 
@@ -77,8 +84,8 @@
                 android:text="TotalRecovered"
                 android:padding="5dp"
                 android:textSize="20sp"
-                android:id="@+id/totalrecov"
-                android:layout_below="@id/deathCases"
+                android:id="@+id/ttotalrecov"
+                android:layout_below="@id/ddeathCases"
                 android:textColor="@color/Dgreen" ></TextView>
 
             <TextView
@@ -88,10 +95,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/aldrich"
-                android:id="@+id/recover"
+                android:id="@+id/rrecover"
                 android:text="00000"
                 android:textSize="20sp"
-                android:layout_below="@id/deathCases"
+                android:layout_below="@id/ddeathCases"
                 android:textColor="@color/Dgreen"
                 ></TextView>
         </RelativeLayout>
@@ -106,39 +113,10 @@
         android:orientation="vertical"
         android:padding="10dp"
         android:backgroundTint="@color/black">
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recycler"></androidx.recyclerview.widget.RecyclerView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="5dp"
-            app:cardBackgroundColor="@color/Dorange"
-            app:cardCornerRadius="20dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/q1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/abril_fatface"
-                    android:text="@string/quesec"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"></TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/abril_fatface"
-                    android:text="@string/ansFirstText"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"></TextView>
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>
