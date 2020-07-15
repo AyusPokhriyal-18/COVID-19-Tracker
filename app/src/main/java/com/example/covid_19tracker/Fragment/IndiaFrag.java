@@ -3,6 +3,7 @@ package com.example.covid_19tracker.Fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -19,7 +20,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.covid_19tracker.R;
+import com.example.covid_19tracker.adapter.StateAdapter;
+import com.example.covid_19tracker.model.StateModel;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,7 +33,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class IndiaFrag extends Fragment {
-private ArrayList<stateModel>arrayList;
+private ArrayList<StateModel>arrayList;
 RecyclerView recyclerView;
     TextView indtotalCase,indtotalDeath,indtotalRecov;
     View view;
@@ -40,11 +44,17 @@ RecyclerView recyclerView;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_india, container, false);
-
+adapterSetup();
         viewInit();
         getDataAPI();
         getStateDataAPI();
         return view;
+    }
+
+    private void adapterSetup() {
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        StateAdapter stateAdapter= new StateAdapter(arrayList);
+        recyclerView.setAdapter(stateAdapter);
     }
 
     private void getStateDataAPI() {
@@ -53,10 +63,13 @@ RecyclerView recyclerView;
             @Override
             public void onResponse(String response) {
                 try {
-                    JSONObject jsonObject=new JSONObject(response).getJSONObject("data").getJSONObject("summary");
-                    indtotalCase.setText(jsonObject.getString("total"));
-                    indtotalDeath.setText(jsonObject.getString("deaths"));
-                    indtotalRecov.setText( jsonObject.getString("discharged"));
+                    JSONObject jsonObject=new JSONObject(response);
+                    JSONArray jsonArray=jsonObject.getJSONObject("data").getJSONArray("regional");
+
+                    for(int i=0;i<jsonArray.length(); i++){
+                        JSONObject data= jsonArray.getJSONObject(i);
+                        arrayList.add(new StateModel(data.getString("loc"), (String) data.get("totalConfirmed")));
+                    }adapterSetup();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -71,18 +84,22 @@ RecyclerView recyclerView;
             }
 
         });
-        requestQueue.add(stringRequest);
+        Volley.newRequestQueue(getActivity()).add(stringRequest);
     }
 
     private void getDataAPI() {
         RequestQueue requestQueue= Volley.newRequestQueue(getActivity());
 
         String url="https://api.rootnet.in/covid19-in/stats/latest ";
+        arrayList=new ArrayList<>();
         StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject=new JSONObject(response).getJSONObject("data").getJSONObject("summary");
+                    indtotalCase.setText(jsonObject.getString("total"));
+                    indtotalDeath.setText(jsonObject.getString("deaths"));
+                    indtotalRecov.setText( jsonObject.getString("discharged"));
 
 
                 } catch (JSONException e) {
@@ -106,5 +123,6 @@ RecyclerView recyclerView;
         indtotalDeath=view.findViewById(R.id.ddeaths);
         indtotalRecov=view.findViewById(R.id.rrecover);
         recyclerView=view.findViewById(R.id.recycler);
+
     }
 }

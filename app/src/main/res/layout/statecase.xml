@@ -5,15 +5,15 @@
     android:backgroundTint="@color/black"
     >
 
-    <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
         android:layout_height="217dp"
         android:layout_margin="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black"
+            android:layout_height="wrap_content"
+
             android:padding="10dp">
 
             <TextView
@@ -22,7 +22,7 @@
                 android:fontFamily="@font/abril_fatface"
                 android:text="TotalCases"
                 android:textSize="20sp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/sname"
                 android:padding="5dp"></TextView>
 
@@ -36,10 +36,10 @@
                 android:fontFamily="@font/aldrich"
                 android:text="00000"
                 android:padding="5dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/cccases"
                 android:textSize="20sp"></TextView>
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

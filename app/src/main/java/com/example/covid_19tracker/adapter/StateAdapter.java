@@ -9,11 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.covid_19tracker.R;
+import com.example.covid_19tracker.model.StateModel;
 
 import java.util.ArrayList;
 
-public class stateAdapter extends RecyclerView.Adapter<stateAdapter.ViewHolder> {
-  private ArrayList<sta>arrayList;
+public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> {
+
+    public StateAdapter(ArrayList<StateModel> arrayList) {
+        this.arrayList = arrayList;
+    }
+
+    private ArrayList<StateModel>arrayList;
+
+
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -23,18 +32,21 @@ public class stateAdapter extends RecyclerView.Adapter<stateAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+StateModel stateModel=arrayList.get(position);
+holder.Statename.setText(stateModel.getStateName());
+        holder.Statecase.setText(stateModel.getStateCase());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arrayList!=null?arrayList.size():0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView Statename, Statecase;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            TextView Statename, Statecase;
+
 
        Statecase= itemView.findViewById(R.id.cccases);
        Statename=itemView.findViewById(R.id.sname);
