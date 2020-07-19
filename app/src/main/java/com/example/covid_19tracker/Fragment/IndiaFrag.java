@@ -58,7 +58,8 @@ adapterSetup();
     }
 
     private void getStateDataAPI() {
-        String url="https://api.rootnet.in/covid19-in/stats/latest ";
+        String url="https://api.rootnet.in/covid19-in/stats/latest";
+        arrayList=new ArrayList<>();
         StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -90,8 +91,8 @@ adapterSetup();
     private void getDataAPI() {
         RequestQueue requestQueue= Volley.newRequestQueue(getActivity());
 
-        String url="https://api.rootnet.in/covid19-in/stats/latest ";
-        arrayList=new ArrayList<>();
+        String url="https://api.rootnet.in/covid19-in/stats/latest";
+
         StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

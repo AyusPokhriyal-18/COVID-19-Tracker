@@ -1,18 +1,10 @@
 package com.example.covid_19tracker.model;
 
 public class StateModel {
-    public StateModel(String stateName, String stateCase) {
-        this.stateName = stateName;
+    private String stateCase;
+
+    public StateModel(String stateCase, String stateName) {
         this.stateCase = stateCase;
-    }
-
-    private String stateName;
-
-    public String getStateName() {
-        return stateName;
-    }
-
-    public void setStateName(String stateName) {
         this.stateName = stateName;
     }
 
@@ -24,6 +16,15 @@ public class StateModel {
         this.stateCase = stateCase;
     }
 
-    private String stateCase;
+    public String getStateName() {
+        return stateName;
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
+    }
+
+    private String stateName;
+
 
 }

@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.covid_19tracker.R;
@@ -16,10 +17,13 @@ import java.util.ArrayList;
 public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> {
 
     public StateAdapter(ArrayList<StateModel> arrayList) {
+
         this.arrayList = arrayList;
     }
 
+
     private ArrayList<StateModel>arrayList;
+
 
 
 
@@ -39,6 +43,7 @@ holder.Statename.setText(stateModel.getStateName());
 
     @Override
     public int getItemCount() {
+
         return arrayList!=null?arrayList.size():0;
     }
 
