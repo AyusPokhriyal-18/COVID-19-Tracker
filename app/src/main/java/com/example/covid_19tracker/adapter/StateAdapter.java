@@ -37,8 +37,8 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 StateModel stateModel=arrayList.get(position);
-holder.Statename.setText(stateModel.getStateName());
-        holder.Statecase.setText(stateModel.getStateCase());
+holder.StateName.setText(stateModel.getStateName());
+        holder.StateCase.setText(stateModel.getStateCase());
     }
 
     @Override
@@ -48,13 +48,13 @@ holder.Statename.setText(stateModel.getStateName());
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView Statename, Statecase;
+        TextView StateName, StateCase;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
 
-       Statecase= itemView.findViewById(R.id.cccases);
-       Statename=itemView.findViewById(R.id.sname);
+       StateCase= itemView.findViewById(R.id.cccases);
+       StateName=itemView.findViewById(R.id.sname);
         }
     }
 }

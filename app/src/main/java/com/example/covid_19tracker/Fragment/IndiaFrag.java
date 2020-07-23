@@ -34,8 +34,9 @@ import java.util.ArrayList;
  */
 public class IndiaFrag extends Fragment {
 private ArrayList<StateModel>arrayList;
-RecyclerView recyclerView;
+
     TextView indtotalCase,indtotalDeath,indtotalRecov;
+    RecyclerView recyclerView;
     View view;
 
 
@@ -44,23 +45,24 @@ RecyclerView recyclerView;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_india, container, false);
-adapterSetup();
+
         viewInit();
         getDataAPI();
+        adapterSetup();
         getStateDataAPI();
         return view;
     }
 
     private void adapterSetup() {
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+      recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         StateAdapter stateAdapter= new StateAdapter(arrayList);
-        recyclerView.setAdapter(stateAdapter);
+       recyclerView.setAdapter(stateAdapter);
     }
 
     private void getStateDataAPI() {
         String url="https://api.rootnet.in/covid19-in/stats/latest";
         arrayList=new ArrayList<>();
-        StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+         StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -69,7 +71,7 @@ adapterSetup();
 
                     for(int i=0;i<jsonArray.length(); i++){
                         JSONObject data= jsonArray.getJSONObject(i);
-                        arrayList.add(new StateModel(data.getString("loc"), (String) data.get("totalConfirmed")));
+                        arrayList.add(new StateModel(data.getString("loc"),  data.getString("totalConfirmed")));
                     }adapterSetup();
 
                 } catch (JSONException e) {
@@ -123,7 +125,6 @@ adapterSetup();
         indtotalCase=view.findViewById(R.id.ccases);
         indtotalDeath=view.findViewById(R.id.ddeaths);
         indtotalRecov=view.findViewById(R.id.rrecover);
-        recyclerView=view.findViewById(R.id.recycler);
-
+        recyclerView=view.findViewById(R.id.recyclerView);
     }
 }
