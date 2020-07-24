@@ -9,19 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.covid_19tracker.R;
+import com.example.covid_19tracker.model.CountryModel;
 import com.example.covid_19tracker.model.StateModel;
 
 import java.util.ArrayList;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
 
-    public CountryAdapter(ArrayList<StateModel> arrayList) {
+    public CountryAdapter(ArrayList<CountryModel> arrayList) {
 
         this.arrayList = arrayList;
     }
 
 
-    private ArrayList<StateModel>arrayList;
+    private ArrayList<CountryModel>arrayList;
 
 
 
@@ -35,9 +36,9 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-StateModel stateModel=arrayList.get(position);
-holder.StateName.setText(stateModel.getStateName());
-        holder.StateCase.setText(stateModel.getStateCase());
+CountryModel countryModel=arrayList.get(position);
+holder.CountryName.setText(countryModel.getCountryName());
+        holder.CountryCase.setText(CountryModel.getCountryCase());
     }
 
     @Override
@@ -47,13 +48,13 @@ holder.StateName.setText(stateModel.getStateName());
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView StateName, StateCase;
+        TextView CountryCase, CountryName;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
 
-       StateCase= itemView.findViewById(R.id.cccases);
-       StateName=itemView.findViewById(R.id.sname);
+       CountryCase= itemView.findViewById(R.id.concases);
+            CountryName=itemView.findViewById(R.id.cname);
         }
     }
 }

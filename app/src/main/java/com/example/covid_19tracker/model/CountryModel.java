@@ -1,30 +1,30 @@
 package com.example.covid_19tracker.model;
 
 public class CountryModel {
-    private String stateCase;
-
-    public CountryModel(String stateCase, String stateName) {
-        this.stateCase = stateCase;
-        this.stateName = stateName;
+    public CountryModel(String countryName, String countryCase) {
+        CountryName = countryName;
+        CountryCase = countryCase;
     }
 
-    public String getStateCase() {
-        return stateCase;
+    private String CountryName;
+
+    public String getCountryName() {
+        return CountryName;
     }
 
-    public void setStateCase(String stateCase) {
-        this.stateCase = stateCase;
+    public void setCountryName(String countryName) {
+        CountryName = countryName;
     }
 
-    public String getStateName() {
-        return stateName;
+    public static String getCountryCase() {
+        return CountryCase;
     }
 
-    public void setStateName(String stateName) {
-        this.stateName = stateName;
+    public void setCountryCase(String countryCase) {
+        CountryCase = countryCase;
     }
 
-    private String stateName;
+    private static String CountryCase;
 
 
 }

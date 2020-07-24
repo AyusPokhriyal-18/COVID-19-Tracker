@@ -71,7 +71,7 @@ private ArrayList<StateModel>arrayList;
 
                     for(int i=0;i<jsonArray.length(); i++){
                         JSONObject data= jsonArray.getJSONObject(i);
-                        arrayList.add(new StateModel(data.getString("loc"),  data.getString("totalConfirmed")));
+                        arrayList.add(new StateModel(data.getString("data"),  data.getString("regional")));
                     }adapterSetup();
 
                 } catch (JSONException e) {
