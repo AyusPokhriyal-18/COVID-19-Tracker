@@ -61,17 +61,17 @@ View view;
     }
 
     private void getdata() {
-        String url="https://2019ncov.asia/api/country_region";
+        String url="https://www.trackcorona.live/api/countries";
         arrayList=new ArrayList<>();
         StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject=new JSONObject(response);
-                    JSONArray jsonArray=jsonObject.getJSONArray("results");
+                    JSONArray jsonArray=jsonObject.getJSONArray("data");
                     for(int i=0;i<jsonArray.length(); i++){
                         JSONObject data= jsonArray.getJSONObject(i);
-                        arrayList.add(new CountryModel(data.getString("country_region"),  data.getString("confirmed")));
+                        arrayList.add(new CountryModel(data.getString("location"),  data.getString("confirmed")));
                     }init();
 
                 } catch (JSONException e) {
