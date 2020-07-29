@@ -59,7 +59,7 @@ View view;
         CountryAdapter countryAdapter= new CountryAdapter(arrayList);
         recyclerView.setAdapter(countryAdapter);
     }
-
+    //https://www.trackcorona.live/api/countries
     private void getdata() {
         String url="https://www.trackcorona.live/api/countries";
         arrayList=new ArrayList<>();
@@ -71,7 +71,7 @@ View view;
                     JSONArray jsonArray=jsonObject.getJSONArray("data");
                     for(int i=0;i<jsonArray.length(); i++){
                         JSONObject data= jsonArray.getJSONObject(i);
-                        arrayList.add(new CountryModel(data.getString("location"),  data.getString("confirmed")));
+                        arrayList.add(new CountryModel(data.getString("location"),data.getString("confirmed")));
                     }init();
 
                 } catch (JSONException e) {
