@@ -58,3 +58,4 @@ holder.StateName.setText(stateModel.getStateName());
         }
     }
 }
+
